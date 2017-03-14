@@ -6,6 +6,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { First } from './first/first.component';
 import { SecondComponent } from './second/second.component';
+import { CourseModule } from './course/course.module';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { SecondComponent } from './second/second.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CourseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
