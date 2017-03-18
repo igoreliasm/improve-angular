@@ -1,4 +1,6 @@
+import { CourseService } from './course.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-course',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent implements OnInit {
 
-  constructor() { }
+  public arr: Array <any>
+
+  constructor(public serviceS: CourseService) {
+    this.arr = this.serviceS.getArr()
+   }
 
   ngOnInit() {
   }
