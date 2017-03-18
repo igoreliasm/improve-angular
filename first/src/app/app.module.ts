@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { First } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { CourseModule } from './course/course.module';
+import { CourseService } from './course/course.service';
 
 
 @NgModule({
@@ -21,7 +22,7 @@ import { CourseModule } from './course/course.module';
     HttpModule,
     CourseModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
