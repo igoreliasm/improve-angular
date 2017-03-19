@@ -1,3 +1,48 @@
-<p>
-  data-binding works!
-</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    
+  </head>
+  <body>
+    <article>
+      <h3>Class and Style binding</h3>
+      <div>
+        Select a class:
+        <select #class (change)="0">
+          <option value="alert-success">Success</option>
+          <option value="alert-info">Info</option>
+          <option value="alert-warning">Warning</option>
+          <option value="alert-danger">Error</option>
+        </select>
+        <br /><br />
+        <div class="alert" role="alert" [class.alert-success]="class.value == 'alert-success'">
+          Success
+        </div>
+        <div class="alert" role="alert" [class.alert-info]="class.value == 'alert-info'">
+          Info
+        </div>
+        <div class="alert" role="alert" [class.alert-warning]="class.value == 'alert-warning'">
+          Warning
+        </div>
+        <div class="alert" role="alert" [class.alert-danger]="class.value == 'alert-danger'">
+          Error
+        </div>
+      </div>
+      <div class="alert alert-danger" role="alert" [style.display]="class.value == 'alert-danger' ? 'block': 'none'">
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+         deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+         similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem 
+         rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque 
+         nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor 
+         repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut 
+         et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente 
+         delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
+        repellat."
+      </div>
+    </article>
+  </body>
+</html>
